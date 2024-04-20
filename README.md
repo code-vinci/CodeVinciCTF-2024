@@ -4,4 +4,5 @@ flag format: CodeVinciCTF{...}
 
 
 - cripto
-    - MTP: vuole pubblicato solamente il file encrypted.txt
+    - xorUniverse: vuole pubblicato il main.c e il risultato 
+    - Many Time Pad: vuole pubblicato solamente il file encrypted.txt
