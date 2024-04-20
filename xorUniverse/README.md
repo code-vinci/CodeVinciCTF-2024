@@ -1,5 +1,5 @@
 # Introduzione
-lo xor è un operazione reversibile se si conosce uno dei due addendi
+lo xor è un operazione reversibile se si conosce uno dei due operandi
 
 # Vulnerabilità
 proprietà dello XOR
