@@ -1,13 +1,13 @@
-# introduzione
+# Introduzione
 lo xor è un operazione reversibile se si conosce uno dei due addendi
 
-# vulnerabilità
+# Vulnerabilità
 proprietà dello XOR
 
-# risoluzione
+# Risoluzione
 basta prendere il risultato e fare lo xor con la chiave in chiaro lasciata nel programma
 
 # flag
-CodeVinciCTF{faccio_sempre_lo_xor_sulle_mie_password}
+`CodeVinciCTF{faccio_sempre_lo_xor_sulle_mie_password}`
 
 made by @Greva151
