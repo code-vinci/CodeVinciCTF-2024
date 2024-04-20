@@ -1,2 +1,2 @@
-# global_CTF
-global CTF
+# Global_CTF
+## flag format: CodeVinciCTF{...}
