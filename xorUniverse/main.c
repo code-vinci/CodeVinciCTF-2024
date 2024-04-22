@@ -9,7 +9,7 @@ int main(){
     printf("my password encrypted: ");
 
     for(int i = 0; i < strlen(flag); i++){
-        printf("%02x ", flag[i] ^ key[i]); 
+        printf("0x%02X ", flag[i] ^ key[i]); 
     }  
 
     return 0; 
