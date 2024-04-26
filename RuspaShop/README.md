@@ -1,15 +1,17 @@
-# INTRODUZIONE
+# Ruspa Shop
+
+## INTRODUZIONE
 
 RSA è uno degli schemi crittografici più famosi e usa la aritmetica modulare
 DES è usa la crittografia a blocchi
 
 
-# VULNERABILITA:
+## VULNERABILITA:
 RSA implementata in questa challenge utilizza un'esponente(e) molto piccolo e un modulo (n) molto grande
 per questo possiamo semplicemente fare una radice ennesima così da ottenere la chiave originale che era stata cryptata
 
 
-# RISOLUZIONE
+## RISOLUZIONE
 
 per risolvere questa challenge dobbiamo seguire i seguenti step:
 
@@ -32,5 +34,7 @@ per risolvere questa challenge dobbiamo seguire i seguenti step:
 `flag droppata: eodCcinVFCTimR3{_v30cl0bwS_k_7h1u_rA}p45`
 `flag: CodeVinciCTF{R3m0v3_bl0ckS_w17h_A_ru5p4}`
 
-made by @haroldboom06
+## Autore
+
+@haroldboom06
 

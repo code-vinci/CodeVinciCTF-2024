@@ -1,4 +1,4 @@
-# Redefining modules
+# Redefining Modules
 
 ## Descrizione
 
@@ -29,7 +29,7 @@ print(long_to_bytes(m))
 
 ## Flag
 
-```CryptoVinci{1_9u35s_my_modu1e5_wer3n't_so_53cure_aft3r_a1l}```
+`CodeVinciCTF{1_9u35s_my_modu1e5_wer3n't_so_53cure_aft3r_a1l}`
 
 
 ## Autore
