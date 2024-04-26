@@ -41,9 +41,9 @@ void listen_HTTP_Server( HTTP_Server* server )
 
         int n_read = read( client_sock, buffer, 1048576 );
 
-        sscanf( buffer, "%s %s %s\n", req.method, req.route, req.version);
+        sscanf( buffer, "%6s %100s %100s\n", req.method, req.route, req.version);
 
-        char* ret = search(server->routes, req.route);
+        char* ret = search( server->routes, req.route );
         int content_size = 0;
 
         if ( ret != NULL ) {
