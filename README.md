@@ -16,3 +16,6 @@ LDC = Livello di conoscenze: 1 - 10
     - Light Bird Exp: vuole pubblicato sia la cartella /lib che il main.c (LDC = 8)
 - Misc
     - Sanity Check: (LDC = 1)
+- OSINT:
+    - OSINT1: Chi è il preside dell'itis (LDC = 1)
+    - OSINT2: Chi è l'ex preside dell'itis (LDC = 2)
