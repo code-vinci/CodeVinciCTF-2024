@@ -23,4 +23,4 @@ LDC = Livello di conoscenze: 1 - 10
     - OSINT4: Qual'è uno dei film preferiti di Ramon Ugolotti (LDC = 5)
     - OSINT5: La flag è all'interno della descrizione del profilo instagram di uno dei organizzatori, chi sarà????????? (LDC = 7)
 - SW:
-    - SendMe-B: vuole pubblicato il file ./cow e hostato su NC (LDC = 2) 
+    - SendMe-B: vuole pubblicato il file ./cow e hostato su NC e impostata la variabile di sistema (LDC = 2) 
