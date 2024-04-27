@@ -21,3 +21,4 @@ LDC = Livello di conoscenze: 1 - 10
     - OSINT2: Chi è l'ex preside dell'itis (LDC = 2)
     - OSINT3: In che materia è laureato Ramon Ugolotti (LDC = 3)
     - OSINT4: Qual'è uno dei film preferiti di Ramon Ugolotti (LDC = 5)
+    - OSINT5: La flag è all'interno della descrizione del profilo instagram di uno dei organizzatori, chi sarà????????? (LDC = 7)
