@@ -1,6 +1,7 @@
 # GlobalCTF
 flag format: CodeVinciCTF{...}
 
+Livello di conoscenze: 1 - 10
 
 ## Challenges
 
