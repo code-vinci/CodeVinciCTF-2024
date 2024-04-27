@@ -1,6 +1,6 @@
 # OSINT1
  
-##descrizione 
+## descrizione: 
 Chi è il preside dell'itis????
 
 ## format flag:
