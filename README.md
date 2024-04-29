@@ -12,6 +12,7 @@ LDC = Livello di conoscenze: 1 - 10
     - Redefining Modules: vuole pubblicato il file chall.py e il risultato (LDC = 7)
     - BRNG: vuole pubblicato solamente il file challenge.py e il servizio nc deve disporre di challenge.py e secret.py (LDC = 9)
 - Web
+    - sendMeCodeVinci: vuole pubblicato sulla porta 5000 il server web e basta (LDC = 1)
     - Cojailde: vuole pubblicato solamente il file chall.py (LDC = 5)
     - Light Bird Exp: vuole pubblicato sia la cartella /lib che il main.c (LDC = 8)
 - Misc
