@@ -25,4 +25,4 @@ LDC = Livello di conoscenze: 1 - 10
     - OSINT5: La flag è all'interno della descrizione del profilo instagram di uno dei organizzatori, chi sarà????????? (LDC = 7)
 - SW:
     - SendMe-B: vuole pubblicato il file ./cow e hostato su NC e impostata la variabile di sistema (LDC = 2)
-    - BankManager: vuole pubblicato il sorgente main.c e il file BankManager (LDC = 3)
+    - BankManager: vuole pubblicato il sorgente main.c e il file BankManager e hostata su NC (LDC = 3)
