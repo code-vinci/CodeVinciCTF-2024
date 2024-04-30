@@ -13,10 +13,10 @@ LDC = Livello di conoscenze: 1 - 10
     - BRNG: vuole pubblicato solamente il file challenge.py e il servizio nc deve disporre di challenge.py e secret.py (LDC = 9)
 - Web
     - sendMeCodeVinci: vuole pubblicato sulla porta 5000 il server web e basta (LDC = 1)
-    - Cojailde: vuole pubblicato solamente il file chall.py (LDC = 5)
     - Light Bird Exp: vuole pubblicato sia la cartella /lib che il main.c (LDC = 8)
 - Misc
     - Sanity Check: (LDC = 1)
+    - Cojailde: vuole pubblicato solamente il file chall.py (LDC = 5)
 - OSINT:
     - OSINT1: Chi è il preside dell'itis (LDC = 1)
     - OSINT2: Chi è l'ex preside dell'itis (LDC = 2)
