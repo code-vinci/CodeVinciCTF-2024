@@ -16,4 +16,4 @@ FROM pwn.red/jail
 RUN echo 'export FLAG="CodeVinciCTF{n0n_s0n0_s1mp4t1ch3_l3_mucch3}"' >> /etc/profile
 
 COPY --from=ubuntu:18.04 / /srv
-COPY --from=builder /workdir/chal /srv/app/run
+COPY --from=builder /workdir/cow /srv/app/run
