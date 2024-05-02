@@ -1,0 +1,10 @@
+services:
+  sendme-b:
+    build: ./SendMe-B
+    restart: unless-stopped
+    environment:
+      - JAIL_ENV_FLAG="CodeVinciCTF{n0n_s0n0_s1mp4t1ch3_l3_mucch3}"
+    ports:
+      - "5000:5000"
+    privileged: true
+    networks: [ ]
