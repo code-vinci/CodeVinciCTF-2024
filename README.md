@@ -2,6 +2,7 @@
 flag format: CodeVinciCTF{...}
 
 LDC = Livello di conoscenze: 1 - 10
+Decay Function level = 30
 
 ## Challenges
 
