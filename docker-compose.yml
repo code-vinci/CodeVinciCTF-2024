@@ -8,3 +8,13 @@ services:
       - "1337:5000"
     privileged: true
     networks: [ ]
+    
+  bankmanager:
+    build: ./BankManager 
+    restart: unless-stopped
+    environment:
+      - JAIL_ENV_FLAG="CodeVinciCTF{Ar3_You_4uth0riz3d?}"
+    ports:
+      - "1338:5000"
+    privileged: true
+    networks: [ ]
