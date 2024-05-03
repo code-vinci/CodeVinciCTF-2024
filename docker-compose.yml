@@ -18,3 +18,12 @@ services:
       - "1338:5000"
     privileged: true
     networks: [ ]
+  
+  brng:
+    build: ./BRNG
+    restart: unless-stopped
+    ports:
+      - "1342:5000"
+    privileged: true
+    networks: [ ]
+
