@@ -19,6 +19,16 @@ services:
     privileged: true
     networks: [ ]
   
+  caos:
+    build: ./caos 
+    restart: unless-stopped
+    environment:
+      - JAIL_ENV_FLAG="CodeVinciCTF{th1s_1s_r3t2w1n}"
+    ports:
+      - "1339:5000"
+    privileged: true
+    networks: [ ]
+  
   brng:
     build: ./BRNG
     restart: unless-stopped
@@ -34,4 +44,5 @@ services:
       - "1343:5000"
     privileged: true
     networks: [ ]
+  
 
