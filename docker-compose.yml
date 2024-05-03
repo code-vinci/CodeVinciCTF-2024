@@ -26,4 +26,12 @@ services:
       - "1342:5000"
     privileged: true
     networks: [ ]
+  
+  sendmecodevinci:
+    build: ./sendMeCodeVinci
+    restart: unless-stopped
+    ports:
+      - "1343:5000"
+    privileged: true
+    networks: [ ]
 
