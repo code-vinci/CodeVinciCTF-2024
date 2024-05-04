@@ -27,3 +27,4 @@ Decay Function level = 30
 - SW:
     - SendMe-B: vuole pubblicato il file ./cow e hostato su NC e impostata la variabile di sistema (LDC = 2)
     - BankManager: vuole pubblicato il sorgente main.c e il file BankManager e hostata su NC (LDC = 3)
+    - caos: vuole pubblicato l'eseguibile e hostata su NC (LDC = 5)
