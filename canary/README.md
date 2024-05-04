@@ -1,4 +1,4 @@
-# Canry
+# Canary
 
 ## Descrizione:
 tutti parlano di questi canary ma non capisco cosa siano......
