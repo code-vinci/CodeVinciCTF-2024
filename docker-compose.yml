@@ -29,6 +29,16 @@ services:
     privileged: true
     networks: [ ]
   
+  canary:
+    build: ./canary 
+    restart: unless-stopped
+    environment:
+      - JAIL_ENV_FLAG="CodeVinciCTF{vff4444_s31_tr0pp0_f0rt3}"
+    ports:
+      - "1340:5000"
+    privileged: true
+    networks: [ ]
+  
   brng:
     build: ./BRNG
     restart: unless-stopped
