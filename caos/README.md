@@ -11,3 +11,4 @@ gcc -o caos main.c -fno-stack-protector -no-pie
 
 ## flag 
 `CodeVinciCTF{th1s_1s_r3t2w1n}`
+make by @Greva151
