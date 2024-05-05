@@ -1,4 +1,4 @@
-#!/user/bin/env python3
+#!/usr/local/bin/python
 
 blacklist = ['write','open','pty','from','sys','platform','type', 'ls', 'cat', 'flag', 'head', 'tail', 'print']
 import os
