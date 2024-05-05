@@ -1,4 +1,13 @@
 services:
+
+  lightbirdexp:
+    build: ./LightBirdExp
+    restart: unless-stopped
+    ports:
+      - "1346:80"
+    privileged: true
+    networks: [ ]
+    
   sendme-b:
     build: ./SendMe-B
     restart: unless-stopped
