@@ -1,4 +1,3 @@
-
 #include "LightBird.h"
 
 
@@ -6,13 +5,20 @@ void init_HTTP_Server( HTTP_Server* server, unsigned short port )
 {
     server->port = port;
     server->socket = socket(AF_INET, SOCK_STREAM, 0);
+    if ( server->socket == -1 ) {
+        printf("Could not create socket;\n");
+        exit(1);
+    }
 
 	struct sockaddr_in server_address;
 	server_address.sin_family = AF_INET;
 	server_address.sin_port = htons(port);
 	server_address.sin_addr.s_addr = INADDR_ANY;
 
-	bind(server->socket, (struct sockaddr *) &server_address, sizeof(server_address));
+	if ( bind(server->socket, (struct sockaddr *) &server_address, sizeof(server_address)) < 0 ) {
+        printf("Error during bind socket;\n");
+        exit(1);
+    }
 
     server->routes = init_hash_table( HASHTABLESIZE );
 }
@@ -32,14 +38,14 @@ void listen_HTTP_Server( HTTP_Server* server )
     listen(server->socket, 10);
     
     for ( ; ; ) {
+        Request req;
         struct sockaddr_in client;
         int addrlen = sizeof(client);
         
         int client_sock = accept( server->socket, (struct sockaddr*)&client, (socklen_t*)&addrlen );
 
-        Request req;
-
-        int n_read = read( client_sock, buffer, 1048576 );
+        int n_read = recv( client_sock, buffer, 1048574, 0);
+        buffer[n_read] = '\0';
 
         sscanf( buffer, "%6s %100s %100s\n", req.method, req.route, req.version);
 
@@ -49,7 +55,9 @@ void listen_HTTP_Server( HTTP_Server* server )
         if ( ret != NULL ) {
             FILE* file = fopen( ret , "r");
             if ( file != NULL ) {
-                content_size = fread( buffer, sizeof(char), 1048576, file );
+                content_size = fread( buffer, sizeof(char), 1048574, file );
+                buffer[content_size] = '\0';
+                content_size++;
                 fclose(file);
             }
         }

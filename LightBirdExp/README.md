@@ -18,7 +18,7 @@ def hash( key:str, mod:int ) -> int:
 pointer = hash( '/flag', 100 )
 
 for i in range( 1000 ):
-    if pointer + 1 == hash( f'/flag{i}', 100 ):
+    if pointer + 1 == hash( f'/flag{i}', 256 ):
         print(f'/flag{i}')
         break
 
