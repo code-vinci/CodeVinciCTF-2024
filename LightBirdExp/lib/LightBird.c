@@ -57,7 +57,6 @@ void listen_HTTP_Server( HTTP_Server* server )
             if ( file != NULL ) {
                 content_size = fread( buffer, sizeof(char), 1048574, file );
                 buffer[content_size] = '\0';
-                content_size++;
                 fclose(file);
             }
         }
