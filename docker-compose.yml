@@ -55,4 +55,10 @@ services:
     privileged: true
     networks: [ ]
   
-
+  cojailde:
+    build: ./Cojailde
+    restart: unless-stopped
+    ports:
+      - "1348:5000"
+    privileged: true
+    networks: [ ]
