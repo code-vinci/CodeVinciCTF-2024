@@ -16,6 +16,4 @@ RUN gcc -o server main.c
 
 RUN chmod +x ./server
 
-EXPOSE 80
-
 CMD ["./server"]
