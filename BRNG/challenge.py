@@ -1,4 +1,4 @@
-#! /bin/python3
+#!/usr/local/bin/python
 
 from Crypto.Util.number import bytes_to_long, getPrime
 import string
