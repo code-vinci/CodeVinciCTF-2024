@@ -71,3 +71,11 @@ services:
       - "1348:5000"
     privileged: true
     networks: [ ]
+  
+  colosso:
+    build: ./colosso
+    restart: unless-stopped
+    ports:
+      - "1341:5000"
+    privileged: true
+    networks: [ ]
