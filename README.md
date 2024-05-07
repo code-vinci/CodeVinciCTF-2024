@@ -17,6 +17,7 @@ Decay Function level = 30
     - Light Bird Exp: vuole pubblicato sia la cartella /lib che il main.c (LDC = 8)
 - Misc
     - Sanity Check: (LDC = 1)
+    - colosso: va hostato su NC il file challenge.py e NON va allegato nulla alla challenge (LDC = 3)
     - Cojailde: vuole pubblicato solamente il file chall.py e hostata su NC (LDC = 5)
 - OSINT:
     - OSINT1: Chi è il preside dell'itis (LDC = 1)
