@@ -1,7 +1,10 @@
-FROM python:3.8-slim
-WORKDIR /app
+FROM python:3.9
 
-RUN pip3 install flask
-COPY . .
+WORKDIR /app
+RUN pip install --no-cache-dir flask
+
+COPY ./main.py ./main.py
+
 EXPOSE 5000
-CMD ["python3", "main.py"]
+
+CMD ["python", "main.py"]
