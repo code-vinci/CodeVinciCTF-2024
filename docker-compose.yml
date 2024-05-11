@@ -4,7 +4,7 @@ services:
     build: ./LightBirdExp
     restart: unless-stopped
     ports:
-      - "1346:80"
+      - "1346:8080"
     privileged: true
     networks: [ ]
     
