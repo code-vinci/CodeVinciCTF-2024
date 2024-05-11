@@ -9,7 +9,7 @@ Decay Function level = 30
 - Cripto
     - xorUniverse: vuole pubblicato il main.c e il risultato (LDC = 1)
     - ManyTimePad: vuole pubblicato solamente il file encrypted.txt (LDC = 3)
-    - Ruspa Shop: vuole pubblicato solamente il file source.py (LDC = 6)
+    - Ruspa Shop: vuole pubblicato solamente il file source.py e hostata su NC (LDC = 6)
     - Redefining Modules: vuole pubblicato il file chall.py e il risultato (LDC = 7)
     - BRNG: vuole pubblicato solamente il file challenge.py e il servizio nc deve disporre di challenge.py e secret.py (LDC = 9)
 - Web
