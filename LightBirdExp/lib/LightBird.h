@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#define HASHTABLESIZE 100
+#define HASHTABLESIZE 256
 
 typedef struct {
     char* key;
