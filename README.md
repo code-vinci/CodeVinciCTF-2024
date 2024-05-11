@@ -20,6 +20,7 @@ Decay Function level = 30
     - Register: vuole solo pubblicato il file register.pcap (LDC = 2)
     - colosso: va hostato su NC il file challenge.py e NON va allegato nulla alla challenge (LDC = 3)
     - Cojailde: vuole pubblicato solamente il file chall.py e hostata su NC (LDC = 5)
+    - Binario Incompleto: vuole pubblicato solamente source.py e hostata su NC (LDC = 5)
 - OSINT:
     - OSINT1: Chi è il preside dell'itis (LDC = 1)
     - OSINT2: Chi è l'ex preside dell'itis (LDC = 2)
