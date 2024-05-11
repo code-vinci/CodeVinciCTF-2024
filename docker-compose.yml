@@ -79,3 +79,11 @@ services:
       - "1341:5000"
     privileged: true
     networks: [ ]
+  
+  binario_incompleto:
+    build: ./Binario_Incompleto
+    restart: unless-stopped
+    ports:
+      - "1347:5000"
+    privileged: true
+    networks: [ ]
