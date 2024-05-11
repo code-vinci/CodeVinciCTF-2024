@@ -1,0 +1,98 @@
+<html><head>
+    <title>CodeVinci Pinger</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(250, 250, 250);
+            font-family: sans-serif;
+        }
+
+        .hero {
+            background-color: rgb(184, 105, 3);
+        }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>
+        function ping() {
+            const ping_url = '/api/v1/ping';
+
+            host = document.getElementById('textarea').value;
+            input = document.getElementById('textarea_div');
+
+            data = {
+                'host': host
+            };
+            fetch(ping_url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then((response) => {
+                    return response.json();
+                })
+                .then(function (data) {
+                    command = document.getElementById('command');
+                    command.innerText = data.command;
+                }).finally(function () {
+                    input.className = 'control';
+                    hljs.highlightBlock(command);
+                })
+        }
+        window.onload = function () {
+            command = document.getElementById('command');
+            hljs.highlightBlock(command);
+        }
+    </script>
+</head>
+
+<body>
+    <section class="hero has-text-white">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title has-text-white">
+                    Simple codevinci pinger
+                </h1>
+                <span>Prova a pingare qualsiasi sito per vedere se è online!</span>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns ">
+                <div class="column is-flex">
+                    <div class="container">
+                        <div class="field">
+                            <div class="control" id="textarea_div">
+                                <textarea id="textarea" class="textarea" placeholder="www.google.com"></textarea>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-link" onclick="ping()">Ping!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="container">
+                        <div class="box">
+                            <div class="container">
+                                <p>
+                                    </p><pre id="command" class="bash has-background-white highlight hljs">Nessun risultato dal ping</pre>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body></html>
