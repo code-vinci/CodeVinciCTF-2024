@@ -14,6 +14,7 @@ Decay Function level = 30
     - BRNG: vuole pubblicato solamente il file challenge.py e il servizio nc deve disporre di challenge.py e secret.py (LDC = 9)
 - Web
     - sendMeCodeVinci: vuole pubblicato sulla porta 5000 il server web e basta (LDC = 1)
+    - CodeVinciPinger: vuole solamente hostato su NC (LDC = 3)
     - Light Bird Exp: vuole pubblicato sia la cartella /lib che il main.c (LDC = 8)
 - Misc
     - Sanity Check: (LDC = 1)
