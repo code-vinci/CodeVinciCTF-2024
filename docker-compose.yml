@@ -87,3 +87,11 @@ services:
       - "1347:5000"
     privileged: true
     networks: [ ]
+  
+  codevincipinger:
+    build: ./CodeVinciPinger
+    restart: unless-stopped
+    ports:
+      - "1344:5000"
+    privileged: true
+    networks: [ ]
