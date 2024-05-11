@@ -1,0 +1,1 @@
+FLAG = "CodeVinciCTF{b1n4ry_s74T10n_c4N7_wa1T}"
