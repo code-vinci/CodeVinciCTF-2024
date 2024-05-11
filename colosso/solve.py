@@ -1,9 +1,9 @@
-from pwn import process
+from pwn import *
 from string import ascii_uppercase, ascii_lowercase, digits
 
 possible = digits + ascii_uppercase + '_' + ascii_lowercase + '{}'
 
-io = process('./challenge.py')
+io = remote("localhost", 1341)
 
 io.recvlines(10)
 
