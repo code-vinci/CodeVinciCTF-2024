@@ -13,7 +13,7 @@ def conn():
         if args.DEBUG:
             gdb.attach(r)
     else:
-        r = remote("addr", 1337)
+        r = remote("localhost", 1338)
 
     return r
 
