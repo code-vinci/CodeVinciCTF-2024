@@ -4,7 +4,7 @@
 int main( int argc, char** argv )
 {
     HTTP_Server server;
-    init_HTTP_Server( &server, 80 );
+    init_HTTP_Server( &server, 8080 );
 
 
     insert( server.routes,  "/flag",        "views/bad.html"    );
