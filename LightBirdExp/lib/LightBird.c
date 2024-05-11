@@ -35,36 +35,48 @@ void close_HTTP_Server( HTTP_Server* server )
 void listen_HTTP_Server( HTTP_Server* server )
 {
     char* buffer = malloc( 1048576 );   // 1MB
+    int buffer_size = 0;
+    char* response = malloc( 10485760 ); // 10MB
+    int response_size = 0;
+
     listen(server->socket, 10);
-    
+
     for ( ; ; ) {
         Request req;
         struct sockaddr_in client;
         int addrlen = sizeof(client);
+
+        buffer_size = 0;
+        response_size = 0;
         
         int client_sock = accept( server->socket, (struct sockaddr*)&client, (socklen_t*)&addrlen );
 
-        int n_read = recv( client_sock, buffer, 1048574, 0);
-        buffer[n_read] = '\0';
+        buffer_size = recv( client_sock, buffer, 1048574, 0);
+        buffer[buffer_size] = '\0';
 
         sscanf( buffer, "%6s %100s %100s\n", req.method, req.route, req.version);
 
         char* ret = search( server->routes, req.route );
-        int content_size = 0;
 
         if ( ret != NULL ) {
             FILE* file = fopen( ret , "r");
             if ( file != NULL ) {
-                content_size = fread( buffer, sizeof(char), 1048574, file );
-                buffer[content_size] = '\0';
+                buffer_size = fread( buffer, sizeof(char), 1048574, file );
+                buffer[buffer_size] = '\0';
                 fclose(file);
             }
+            response_size = sprintf( response, "HTTP/1.1 200 OK\nServer: Light Bird\nContent-Type: %s\nContent-Length: %d\n\n", "text/html", buffer_size );
+            memcpy( response + response_size, buffer, buffer_size );
+            response_size += buffer_size;
         }
 
-        send( client_sock, buffer, content_size, 0 );
+        send( client_sock, response, response_size, 0 );
 
         close( client_sock );
     }
+
+    free(buffer);
+    free(response);
 }
 
 unsigned int hash( const char* key, int mod )
