@@ -1,6 +1,6 @@
-from pwn import process
+from pwn import *
 
-io = process("./source.py")
+io = remote("localhost", 1347)
 for i in range(50):
     io.recvuntil(b"= ")
     n = int(io.recvline(False).decode())
