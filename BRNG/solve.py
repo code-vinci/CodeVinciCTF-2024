@@ -1,8 +1,8 @@
-from pwn import process
+from pwn import *
 from Crypto.Util.number import long_to_bytes
 from sage.all import *
 
-io = process("./challenge.py")
+io = remote("localhost", 1342)
 
 io.sendlineafter(b'token)', b'')
 io.recvline()
