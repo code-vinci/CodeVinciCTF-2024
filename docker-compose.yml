@@ -88,10 +88,14 @@ services:
     privileged: true
     networks: [ ]
   
-  codevincipinger:
-    build: ./CodeVinciPinger
+  proxy:
+    build: ./insanity-check/build/proxy
     restart: unless-stopped
     ports:
-      - "1344:5000"
-    privileged: true
-    networks: [ ]
+      - 1349:3000
+  backend:
+    build: ./insanity-check/build/backend
+    restart: unless-stopped
+    environment:
+      - FLAG=CodeVinciCTF{n3vEr_tRu5t_4_w4f_:drop_of_blood:}
+  
