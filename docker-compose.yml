@@ -108,3 +108,11 @@ services:
     environment:
       - FLAG="CodeVinciCTF{4lw4ys_ch3ck_inputs}"
     networks: [ ]
+  
+  ruspashop:
+    build: ./Ruspa_Shop
+    restart: unless-stopped
+    ports:
+      - "1345:5000"
+    privileged: true
+    networks: [ ]
