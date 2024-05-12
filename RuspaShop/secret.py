@@ -1,1 +1,0 @@
-FLAG = b"eodCcinVFCTimR3{_v30cl0bwS_k_7h1u_rA}p45"
