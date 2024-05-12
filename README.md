@@ -15,6 +15,7 @@ Decay Function level = 30
 - Web
     - sendMeCodeVinci: vuole pubblicato sulla porta 5000 il server web e basta (LDC = 1)
     - CodeVinciPinger: vuole solamente hostato su NC (LDC = 3)
+    - insanity-check: esposto lo zip che c'è in CTFd(LDC = 6)
     - Light Bird Exp: vuole pubblicato sia la cartella /lib che il main.c (LDC = 8)
 - Misc
     - Sanity Check: (LDC = 1)
