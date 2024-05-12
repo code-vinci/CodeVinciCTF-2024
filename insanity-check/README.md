@@ -8,10 +8,8 @@ docker compose up
 Ora il sito è disponibile al link: [http://localhost:4567](http://localhost:4567).
 
 ## Descrizione
-@benjamin ha scoperto i firewall???
-
-Corri a fare first blood: [<url>](<url>).
-
+il Team CodeVinci ha scoperto i firewall??
+Corri a fare first blood
 
 *Author: [@benjamin](https://github.com/b3nj4m1no)*
 
