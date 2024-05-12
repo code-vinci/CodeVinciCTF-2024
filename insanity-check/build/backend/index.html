@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insanity Check</title>
+  </head>
+  <body>
+    <div style="transform: rotate(-5deg);">
+      <h1>Desideri la flag di @benjamin?</h1>
+      <button id="button" style="font-size: 3rem; transform: rotate(15deg) translatex(5rem);">
+        Cliccami!
+      </button>
+    </div>
+    <script>
+      button.addEventListener("click", async () => {
+        const flag = await fetch("/", {
+          method: "POST",
+          body: JSON.stringify({ dammilaflag: true }),
+        }).then((r) => r.text());
+
+        alert(flag);
+      });
+    </script>
+  </body>
+</html>
