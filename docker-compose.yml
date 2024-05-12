@@ -99,3 +99,12 @@ services:
     environment:
       - FLAG=CodeVinciCTF{n3vEr_tRu5t_4_w4f_:drop_of_blood:}
   
+  codevincipinger:
+    build: ./CodeVinciPinger
+    restart: unless-stopped
+    ports:
+      - "1344:5000"
+    privileged: true
+    environment:
+      - FLAG="CodeVinciCTF{4lw4ys_ch3ck_inputs}"
+    networks: [ ]
