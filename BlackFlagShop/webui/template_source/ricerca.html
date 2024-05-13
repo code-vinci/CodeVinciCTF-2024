@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ricerca.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='color.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='default.css') }}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+    <nav>
+        <ul>
+
+            {% for option in navigator %}
+            <li><a href="{{ option['route'] }}">{{ option['label'] }}</a></li>
+            {% endfor %}
+            
+          </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchInput" placeholder="Cerca...">
+            <button class="search-button" id="searchButton">Cerca</button>
+        </div>
+        
+        <div id="searchResults"></div>
+        
+    </div>
+
+    <script>
+        document.getElementById("searchButton").addEventListener("click", function(){
+        var query = document.getElementById("searchInput").value;
+        fetch(
+            "/research", {
+                method: "POST",
+                body: query
+            }
+        ).then(
+            (response) => {
+                return response.json();
+            }
+        ).then(
+            (data) => {
+                data.forEach(element => {
+                    document.getElementById("searchResults").innerHTML +=
+                        "<div><h1>" + element.nome + "</h1><p>" + element.immagine + "</p></div>";
+                });
+            }
+        ).catch(
+            (error) => {
+                console.error('Errore durante la richiesta:', error);
+            }
+        );
+    });
+    </script>
+    
+
+</body>
+</html>
