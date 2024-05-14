@@ -31,7 +31,7 @@ fetch( '/static_source' + flag );
 
 ## Flag
 
-`flag{S3c0nd0_m3_QQu4__ce_qu41c0s4_d1_57r4n0}`
+`CodeVinciCTF{S3c0nd0_m3_QQu4__ce_qu41c0s4_d1_57r4n0}`
 
 ## Autore
 `sDibuon`
