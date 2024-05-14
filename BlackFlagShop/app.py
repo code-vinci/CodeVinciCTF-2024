@@ -40,4 +40,4 @@ def _parsequery():
         return "Secondo me stai facendo gabole strane !", 500
 
 
-app.run()
+app.run(host="0.0.0.0")
