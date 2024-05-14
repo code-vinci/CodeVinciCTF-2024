@@ -116,3 +116,11 @@ services:
       - "1345:5000"
     privileged: true
     networks: [ ]
+  
+  blackflagshop:
+    build: ./BlackFlagShop
+    restart: unless-stopped
+    ports:
+      - "1350:5000"
+    privileged: true
+    networks: [ ]
