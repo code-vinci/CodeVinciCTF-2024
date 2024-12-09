@@ -1,12 +1,5 @@
 # Insanity Check
 
-## Setup
-```
-cd build
-docker compose up
-```
-Ora il sito è disponibile al link: [http://localhost:4567](http://localhost:4567).
-
 ## Descrizione
 Esplorare il web può essere rischioso.
 CodeVinci ha deciso di rendere il viaggio più sicuro.
