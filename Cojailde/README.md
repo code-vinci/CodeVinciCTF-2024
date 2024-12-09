@@ -16,4 +16,4 @@ solve = 'exec( "".join([ chr(i) for i in [112, 114, 105, 110, 116, 40, 111, 112,
 
 ## Author
 `sDibuon`
-[@b3nj4m1no]
+[benjamin](@b3nj4m1no)
